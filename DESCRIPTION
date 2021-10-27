@@ -1,0 +1,23 @@
+Package: hypercapnia
+Title: Calculate Carbon Dioxid Equivalent of Inhalative Anaesthesia
+Version: 0.0.1
+Description: Helper functions to calculate carbon dioxid equivalent of
+    inhalative anaesthesia.
+Authors@R: person(given = "Sebastian", family = "Gibb",
+                  email = "mail@sebastiangibb.de",
+                  role = c("aut", "cre"),
+		          comment = c(ORCID = "0000-0001-7406-4443"))
+Maintainer: Sebastian Gibb <mail@sebastiangibb.de>
+Depends:
+    R (>= 4.1.0)
+Suggests:
+    knitr,
+    rmarkdown,
+    testthat
+License: GPL (>= 3)
+Roxygen: list(markdown=TRUE)
+RoxygenNote: 7.1.1
+URL: https://github.com/sgibb/hypercapnia/
+BugReports: https://github.com/sgibb/hypercapnia/issues/
+VignetteBuilder: knitr
+Encoding: UTF-8
