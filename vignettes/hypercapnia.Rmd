@@ -1,0 +1,87 @@
+---
+title: Global Warming Potential of Volatile Anaesthetics
+output:
+    rmarkdown::html_vignette:
+        toc_float: true
+vignette: >
+    %\VignetteIndexEntry{Global Warming Potential of Volatile Anaesthetics}
+    %\VignetteEngine{knitr::rmarkdown}
+    %\VignetteEncoding{UTF-8}
+bibliography: bibliography.bib
+---
+
+# Introduction
+
+The `hypercapnia` package offers functions to estimate the global warming
+potential of volatile anaesthetics based on values described in @Ryan2010.
+
+# Data
+
+`hypercapnia` includes the `ianes` data with important key facts about
+frequently used anaesthetics.
+
+```{r ianes}
+library("hypercapnia")
+
+knitr::kable(ianes)
+```
+
+# Reproducing Table 2
+
+In the next code snippet we reproduce the Table 2 of @Ryan2010.
+(The values slightly differ because of different precision and ounding errors).
+
+```{r table2}
+i <- match(
+    rep(c("Sevoflurane", "Isoflurane", "Desflurane"), c(1, 3, 3)),
+    ianes$Name
+)
+fgf <- c(2, rep(c(0.5, 1, 2), 2))
+gph <- gram_per_hour(mass = ianes$MW[i], mac = ianes$MAC[i], fgf = fgf)
+cde20 <- cde_gram_per_hour(
+    mass = ianes$MW[i], mac = ianes$MAC[i], gwp = ianes$GWP20[i], fgf = fgf
+)
+tbl2 <- data.frame(
+    name = ianes$Name[i], mac = ianes$MAC[i] * 100, fgf = fgf,
+    gph = gph, gwp20 = ianes$GWP20[i], cde20 = cde20,
+    r = cde20 / cde20[1]
+)
+knitr::kable(
+    tbl2,
+    col.names = c(
+        "Name", "et %", "FGF (L/min)", "Grams/hour", "GWP20", "CDE20 (g/h)",
+        "Ratio CDE20"
+    ),
+    caption = paste0(
+        "Comparison of Global Warming Impact of ",
+        "Frequently Used Inhaled Anesthetics per MAC-Hour of Use at ",
+        "Various Fresh Gas Flows; ",
+        "MAC = minimal alveolar concentration; ",
+        "et = endtidal;",
+        "GWP20 = 20-year global warming potential; ",
+        "CDE20 = 20-year carbon dioxide equivalent."
+    ),
+    digits = 1
+)
+```
+
+# Reproducing Figure 1
+
+In the next code snippet we reproduce the Figure 1 of @Ryan2010.
+
+```{r figure1}
+# order in Ryan2010 Figure 1
+o <- c(1, 7, 4)
+barplot(
+    setNames(tbl2$cde20[o], tbl2$name[o]),
+    col = ianes$Color[match(tbl2$name[o], ianes$Name)],
+    main = paste0(
+        "Relative global warming impact of 1 MAC-hour of ",
+        "3 inhaled anesthetics at 2 L fresh gas flow"
+    ),
+    ylab = expression(CDE[20]),
+    sub = "CDE20 = 20-year carbon dioxide equivalent (in grams)"
+)
+```
+
+# References

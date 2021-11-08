@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+
+
+<title>Global Warming Potential of Volatile Anaesthetics</title>
+
+<script src="data:application/javascript;base64,Ly8gUGFuZG9jIDIuOSBhZGRzIGF0dHJpYnV0ZXMgb24gYm90aCBoZWFkZXIgYW5kIGRpdi4gV2UgcmVtb3ZlIHRoZSBmb3JtZXIgKHRvCi8vIGJlIGNvbXBhdGlibGUgd2l0aCB0aGUgYmVoYXZpb3Igb2YgUGFuZG9jIDwgMi44KS4KZG9jdW1lbnQuYWRkRXZlbnRMaXN0ZW5lcignRE9NQ29udGVudExvYWRlZCcsIGZ1bmN0aW9uKGUpIHsKICB2YXIgaHMgPSBkb2N1bWVudC5xdWVyeVNlbGVjdG9yQWxsKCJkaXYuc2VjdGlvbltjbGFzcyo9J2xldmVsJ10gPiA6Zmlyc3QtY2hpbGQiKTsKICB2YXIgaSwgaCwgYTsKICBmb3IgKGkgPSAwOyBpIDwgaHMubGVuZ3RoOyBpKyspIHsKICAgIGggPSBoc1tpXTsKICAgIGlmICghL15oWzEtNl0kL2kudGVzdChoLnRhZ05hbWUpKSBjb250aW51ZTsgIC8vIGl0IHNob3VsZCBiZSBhIGhlYWRlciBoMS1oNgogICAgYSA9IGguYXR0cmlidXRlczsKICAgIHdoaWxlIChhLmxlbmd0aCA+IDApIGgucmVtb3ZlQXR0cmlidXRlKGFbMF0ubmFtZSk7CiAgfQp9KTsK"></script>
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+
+<style type="text/css">
+  code {
+    white-space: pre;
+  }
+  .sourceCode {
+    overflow: visible;
+  }
+</style>
+<style type="text/css" data-origin="pandoc">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+
+</style>
+<script>
+// apply pandoc div.sourceCode style to pre.sourceCode instead
+(function() {
+  var sheets = document.styleSheets;
+  for (var i = 0; i < sheets.length; i++) {
+    if (sheets[i].ownerNode.dataset["origin"] !== "pandoc") continue;
+    try { var rules = sheets[i].cssRules; } catch (e) { continue; }
+    for (var j = 0; j < rules.length; j++) {
+      var rule = rules[j];
+      // check if there is a div.sourceCode rule
+      if (rule.type !== rule.STYLE_RULE || rule.selectorText !== "div.sourceCode") continue;
+      var style = rule.style.cssText;
+      // check if color or background-color is set
+      if (rule.style.color === '' && rule.style.backgroundColor === '') continue;
+      // replace div.sourceCode by a pre.sourceCode rule
+      sheets[i].deleteRule(j);
+      sheets[i].insertRule('pre.sourceCode{' + style + '}', j);
+    }
+  }
+})();
+</script>
+
+
+
+<style type="text/css">
+/* for pandoc --citeproc since 2.11 */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+<link rel="stylesheet" href="data:text/css,body%20%7B%0Abackground%2Dcolor%3A%20%23fff%3B%0Amargin%3A%201em%20auto%3B%0Amax%2Dwidth%3A%20700px%3B%0Aoverflow%3A%20visible%3B%0Apadding%2Dleft%3A%202em%3B%0Apadding%2Dright%3A%202em%3B%0Afont%2Dfamily%3A%20%22Open%20Sans%22%2C%20%22Helvetica%20Neue%22%2C%20Helvetica%2C%20Arial%2C%20sans%2Dserif%3B%0Afont%2Dsize%3A%2014px%3B%0Aline%2Dheight%3A%201%2E35%3B%0A%7D%0A%23TOC%20%7B%0Aclear%3A%20both%3B%0Amargin%3A%200%200%2010px%2010px%3B%0Apadding%3A%204px%3B%0Awidth%3A%20400px%3B%0Aborder%3A%201px%20solid%20%23CCCCCC%3B%0Aborder%2Dradius%3A%205px%3B%0Abackground%2Dcolor%3A%20%23f6f6f6%3B%0Afont%2Dsize%3A%2013px%3B%0Aline%2Dheight%3A%201%2E3%3B%0A%7D%0A%23TOC%20%2Etoctitle%20%7B%0Afont%2Dweight%3A%20bold%3B%0Afont%2Dsize%3A%2015px%3B%0Amargin%2Dleft%3A%205px%3B%0A%7D%0A%23TOC%20ul%20%7B%0Apadding%2Dleft%3A%2040px%3B%0Amargin%2Dleft%3A%20%2D1%2E5em%3B%0Amargin%2Dtop%3A%205px%3B%0Amargin%2Dbottom%3A%205px%3B%0A%7D%0A%23TOC%20ul%20ul%20%7B%0Amargin%2Dleft%3A%20%2D2em%3B%0A%7D%0A%23TOC%20li%20%7B%0Aline%2Dheight%3A%2016px%3B%0A%7D%0Atable%20%7B%0Amargin%3A%201em%20auto%3B%0Aborder%2Dwidth%3A%201px%3B%0Aborder%2Dcolor%3A%20%23DDDDDD%3B%0Aborder%2Dstyle%3A%20outset%3B%0Aborder%2Dcollapse%3A%20collapse%3B%0A%7D%0Atable%20th%20%7B%0Aborder%2Dwidth%3A%202px%3B%0Apadding%3A%205px%3B%0Aborder%2Dstyle%3A%20inset%3B%0A%7D%0Atable%20td%20%7B%0Aborder%2Dwidth%3A%201px%3B%0Aborder%2Dstyle%3A%20inset%3B%0Aline%2Dheight%3A%2018px%3B%0Apadding%3A%205px%205px%3B%0A%7D%0Atable%2C%20table%20th%2C%20table%20td%20%7B%0Aborder%2Dleft%2Dstyle%3A%20none%3B%0Aborder%2Dright%2Dstyle%3A%20none%3B%0A%7D%0Atable%20thead%2C%20table%20tr%2Eeven%20%7B%0Abackground%2Dcolor%3A%20%23f7f7f7%3B%0A%7D%0Ap%20%7B%0Amargin%3A%200%2E5em%200%3B%0A%7D%0Ablockquote%20%7B%0Abackground%2Dcolor%3A%20%23f6f6f6%3B%0Apadding%3A%200%2E25em%200%2E75em%3B%0A%7D%0Ahr%20%7B%0Aborder%2Dstyle%3A%20solid%3B%0Aborder%3A%20none%3B%0Aborder%2Dtop%3A%201px%20solid%20%23777%3B%0Amargin%3A%2028px%200%3B%0A%7D%0Adl%20%7B%0Amargin%2Dleft%3A%200%3B%0A%7D%0Adl%20dd%20%7B%0Amargin%2Dbottom%3A%2013px%3B%0Amargin%2Dleft%3A%2013px%3B%0A%7D%0Adl%20dt%20%7B%0Afont%2Dweight%3A%20bold%3B%0A%7D%0Aul%20%7B%0Amargin%2Dtop%3A%200%3B%0A%7D%0Aul%20li%20%7B%0Alist%2Dstyle%3A%20circle%20outside%3B%0A%7D%0Aul%20ul%20%7B%0Amargin%2Dbottom%3A%200%3B%0A%7D%0Apre%2C%20code%20%7B%0Abackground%2Dcolor%3A%20%23f7f7f7%3B%0Aborder%2Dradius%3A%203px%3B%0Acolor%3A%20%23333%3B%0Awhite%2Dspace%3A%20pre%2Dwrap%3B%20%0A%7D%0Apre%20%7B%0Aborder%2Dradius%3A%203px%3B%0Amargin%3A%205px%200px%2010px%200px%3B%0Apadding%3A%2010px%3B%0A%7D%0Apre%3Anot%28%5Bclass%5D%29%20%7B%0Abackground%2Dcolor%3A%20%23f7f7f7%3B%0A%7D%0Acode%20%7B%0Afont%2Dfamily%3A%20Consolas%2C%20Monaco%2C%20%27Courier%20New%27%2C%20monospace%3B%0Afont%2Dsize%3A%2085%25%3B%0A%7D%0Ap%20%3E%20code%2C%20li%20%3E%20code%20%7B%0Apadding%3A%202px%200px%3B%0A%7D%0Adiv%2Efigure%20%7B%0Atext%2Dalign%3A%20center%3B%0A%7D%0Aimg%20%7B%0Abackground%2Dcolor%3A%20%23FFFFFF%3B%0Apadding%3A%202px%3B%0Aborder%3A%201px%20solid%20%23DDDDDD%3B%0Aborder%2Dradius%3A%203px%3B%0Aborder%3A%201px%20solid%20%23CCCCCC%3B%0Amargin%3A%200%205px%3B%0A%7D%0Ah1%20%7B%0Amargin%2Dtop%3A%200%3B%0Afont%2Dsize%3A%2035px%3B%0Aline%2Dheight%3A%2040px%3B%0A%7D%0Ah2%20%7B%0Aborder%2Dbottom%3A%204px%20solid%20%23f7f7f7%3B%0Apadding%2Dtop%3A%2010px%3B%0Apadding%2Dbottom%3A%202px%3B%0Afont%2Dsize%3A%20145%25%3B%0A%7D%0Ah3%20%7B%0Aborder%2Dbottom%3A%202px%20solid%20%23f7f7f7%3B%0Apadding%2Dtop%3A%2010px%3B%0Afont%2Dsize%3A%20120%25%3B%0A%7D%0Ah4%20%7B%0Aborder%2Dbottom%3A%201px%20solid%20%23f7f7f7%3B%0Amargin%2Dleft%3A%208px%3B%0Afont%2Dsize%3A%20105%25%3B%0A%7D%0Ah5%2C%20h6%20%7B%0Aborder%2Dbottom%3A%201px%20solid%20%23ccc%3B%0Afont%2Dsize%3A%20105%25%3B%0A%7D%0Aa%20%7B%0Acolor%3A%20%230033dd%3B%0Atext%2Ddecoration%3A%20none%3B%0A%7D%0Aa%3Ahover%20%7B%0Acolor%3A%20%236666ff%3B%20%7D%0Aa%3Avisited%20%7B%0Acolor%3A%20%23800080%3B%20%7D%0Aa%3Avisited%3Ahover%20%7B%0Acolor%3A%20%23BB00BB%3B%20%7D%0Aa%5Bhref%5E%3D%22http%3A%22%5D%20%7B%0Atext%2Ddecoration%3A%20underline%3B%20%7D%0Aa%5Bhref%5E%3D%22https%3A%22%5D%20%7B%0Atext%2Ddecoration%3A%20underline%3B%20%7D%0A%0Acode%20%3E%20span%2Ekw%20%7B%20color%3A%20%23555%3B%20font%2Dweight%3A%20bold%3B%20%7D%20%0Acode%20%3E%20span%2Edt%20%7B%20color%3A%20%23902000%3B%20%7D%20%0Acode%20%3E%20span%2Edv%20%7B%20color%3A%20%2340a070%3B%20%7D%20%0Acode%20%3E%20span%2Ebn%20%7B%20color%3A%20%23d14%3B%20%7D%20%0Acode%20%3E%20span%2Efl%20%7B%20color%3A%20%23d14%3B%20%7D%20%0Acode%20%3E%20span%2Ech%20%7B%20color%3A%20%23d14%3B%20%7D%20%0Acode%20%3E%20span%2Est%20%7B%20color%3A%20%23d14%3B%20%7D%20%0Acode%20%3E%20span%2Eco%20%7B%20color%3A%20%23888888%3B%20font%2Dstyle%3A%20italic%3B%20%7D%20%0Acode%20%3E%20span%2Eot%20%7B%20color%3A%20%23007020%3B%20%7D%20%0Acode%20%3E%20span%2Eal%20%7B%20color%3A%20%23ff0000%3B%20font%2Dweight%3A%20bold%3B%20%7D%20%0Acode%20%3E%20span%2Efu%20%7B%20color%3A%20%23900%3B%20font%2Dweight%3A%20bold%3B%20%7D%20%0Acode%20%3E%20span%2Eer%20%7B%20color%3A%20%23a61717%3B%20background%2Dcolor%3A%20%23e3d2d2%3B%20%7D%20%0A" type="text/css" />
+
+
+
+
+</head>
+
+<body>
+
+
+
+
+<h1 class="title toc-ignore">Global Warming Potential of Volatile Anaesthetics</h1>
+
+
+
+<div id="introduction" class="section level1">
+<h1>Introduction</h1>
+<p>The <code>hypercapnia</code> package offers functions to estimate the global warming potential of volatile anaesthetics based on values described in <span class="citation">Ryan and Nielsen (2010)</span>.</p>
+</div>
+<div id="data" class="section level1">
+<h1>Data</h1>
+<p><code>hypercapnia</code> includes the <code>ianes</code> data with important key facts about frequently used anaesthetics.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">&quot;hypercapnia&quot;</span>)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">kable</span>(ianes)</span></code></pre></div>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Name</th>
+<th align="right">MAC</th>
+<th align="right">MW</th>
+<th align="right">Density</th>
+<th align="right">GWP20</th>
+<th align="right">GWP100</th>
+<th align="right">GWP500</th>
+<th align="right">Unit</th>
+<th align="left">Color</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Desflurane</td>
+<td align="right">0.060</td>
+<td align="right">168.0</td>
+<td align="right">1.45</td>
+<td align="right">3714</td>
+<td align="right">1314</td>
+<td align="right">398</td>
+<td align="right">240</td>
+<td align="left">#3c4f8b</td>
+</tr>
+<tr class="even">
+<td align="left">Isoflurane</td>
+<td align="right">0.012</td>
+<td align="right">184.5</td>
+<td align="right">1.49</td>
+<td align="right">1401</td>
+<td align="right">429</td>
+<td align="right">130</td>
+<td align="right">250</td>
+<td align="left">#9a2d80</td>
+</tr>
+<tr class="odd">
+<td align="left">Sevoflurane</td>
+<td align="right">0.020</td>
+<td align="right">200.0</td>
+<td align="right">1.52</td>
+<td align="right">349</td>
+<td align="right">106</td>
+<td align="right">32</td>
+<td align="right">250</td>
+<td align="left">#f8e620</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="reproducing-table-2" class="section level1">
+<h1>Reproducing Table 2</h1>
+<p>In the next code snippet we reproduce the Table 2 of <span class="citation">Ryan and Nielsen (2010)</span>. (The values slightly differ because of different precision and ounding errors).</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>i <span class="ot">&lt;-</span> <span class="fu">match</span>(</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">rep</span>(<span class="fu">c</span>(<span class="st">&quot;Sevoflurane&quot;</span>, <span class="st">&quot;Isoflurane&quot;</span>, <span class="st">&quot;Desflurane&quot;</span>), <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">3</span>, <span class="dv">3</span>)),</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    ianes<span class="sc">$</span>Name</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>fgf <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">2</span>, <span class="fu">rep</span>(<span class="fu">c</span>(<span class="fl">0.5</span>, <span class="dv">1</span>, <span class="dv">2</span>), <span class="dv">2</span>))</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>gph <span class="ot">&lt;-</span> <span class="fu">gram_per_hour</span>(<span class="at">mass =</span> ianes<span class="sc">$</span>MW[i], <span class="at">mac =</span> ianes<span class="sc">$</span>MAC[i], <span class="at">fgf =</span> fgf)</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>cde20 <span class="ot">&lt;-</span> <span class="fu">cde_gram_per_hour</span>(</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>    <span class="at">mass =</span> ianes<span class="sc">$</span>MW[i], <span class="at">mac =</span> ianes<span class="sc">$</span>MAC[i], <span class="at">gwp =</span> ianes<span class="sc">$</span>GWP20[i], <span class="at">fgf =</span> fgf</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>tbl2 <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>    <span class="at">name =</span> ianes<span class="sc">$</span>Name[i], <span class="at">mac =</span> ianes<span class="sc">$</span>MAC[i] <span class="sc">*</span> <span class="dv">100</span>, <span class="at">fgf =</span> fgf,</span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>    <span class="at">gph =</span> gph, <span class="at">gwp20 =</span> ianes<span class="sc">$</span>GWP20[i], <span class="at">cde20 =</span> cde20,</span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>    <span class="at">r =</span> cde20 <span class="sc">/</span> cde20[<span class="dv">1</span>]</span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">kable</span>(</span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>    tbl2,</span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>    <span class="at">col.names =</span> <span class="fu">c</span>(</span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>        <span class="st">&quot;Name&quot;</span>, <span class="st">&quot;et %&quot;</span>, <span class="st">&quot;FGF (L/min)&quot;</span>, <span class="st">&quot;Grams/hour&quot;</span>, <span class="st">&quot;GWP20&quot;</span>, <span class="st">&quot;CDE20 (g/h)&quot;</span>,</span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>        <span class="st">&quot;Ratio CDE20&quot;</span></span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>    ),</span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>    <span class="at">caption =</span> <span class="fu">paste0</span>(</span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>        <span class="st">&quot;Comparison of Global Warming Impact of &quot;</span>,</span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a>        <span class="st">&quot;Frequently Used Inhaled Anesthetics per MAC-Hour of Use at &quot;</span>,</span>
+<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a>        <span class="st">&quot;Various Fresh Gas Flows; &quot;</span>,</span>
+<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a>        <span class="st">&quot;MAC = minimal alveolar concentration; &quot;</span>,</span>
+<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a>        <span class="st">&quot;et = endtidal;&quot;</span>,</span>
+<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a>        <span class="st">&quot;GWP20 = 20-year global warming potential; &quot;</span>,</span>
+<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a>        <span class="st">&quot;CDE20 = 20-year carbon dioxide equivalent.&quot;</span></span>
+<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a>    ),</span>
+<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a>    <span class="at">digits =</span> <span class="dv">1</span></span>
+<span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div>
+<table>
+<caption>Comparison of Global Warming Impact of Frequently Used Inhaled Anesthetics per MAC-Hour of Use at Various Fresh Gas Flows; MAC = minimal alveolar concentration; et = endtidal;GWP20 = 20-year global warming potential; CDE20 = 20-year carbon dioxide equivalent.</caption>
+<thead>
+<tr class="header">
+<th align="left">Name</th>
+<th align="right">et %</th>
+<th align="right">FGF (L/min)</th>
+<th align="right">Grams/hour</th>
+<th align="right">GWP20</th>
+<th align="right">CDE20 (g/h)</th>
+<th align="right">Ratio CDE20</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Sevoflurane</td>
+<td align="right">2.0</td>
+<td align="right">2.0</td>
+<td align="right">20.0</td>
+<td align="right">349</td>
+<td align="right">6964.0</td>
+<td align="right">1.0</td>
+</tr>
+<tr class="even">
+<td align="left">Isoflurane</td>
+<td align="right">1.2</td>
+<td align="right">0.5</td>
+<td align="right">2.8</td>
+<td align="right">1401</td>
+<td align="right">3868.4</td>
+<td align="right">0.6</td>
+</tr>
+<tr class="odd">
+<td align="left">Isoflurane</td>
+<td align="right">1.2</td>
+<td align="right">1.0</td>
+<td align="right">5.5</td>
+<td align="right">1401</td>
+<td align="right">7736.8</td>
+<td align="right">1.1</td>
+</tr>
+<tr class="even">
+<td align="left">Isoflurane</td>
+<td align="right">1.2</td>
+<td align="right">2.0</td>
+<td align="right">11.0</td>
+<td align="right">1401</td>
+<td align="right">15473.5</td>
+<td align="right">2.2</td>
+</tr>
+<tr class="odd">
+<td align="left">Desflurane</td>
+<td align="right">6.0</td>
+<td align="right">0.5</td>
+<td align="right">12.6</td>
+<td align="right">3714</td>
+<td align="right">46689.2</td>
+<td align="right">6.7</td>
+</tr>
+<tr class="even">
+<td align="left">Desflurane</td>
+<td align="right">6.0</td>
+<td align="right">1.0</td>
+<td align="right">25.1</td>
+<td align="right">3714</td>
+<td align="right">93378.4</td>
+<td align="right">13.4</td>
+</tr>
+<tr class="odd">
+<td align="left">Desflurane</td>
+<td align="right">6.0</td>
+<td align="right">2.0</td>
+<td align="right">50.3</td>
+<td align="right">3714</td>
+<td align="right">186756.7</td>
+<td align="right">26.8</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="reproducing-figure-1" class="section level1">
+<h1>Reproducing Figure 1</h1>
+<p>In the next code snippet we reproduce the Figure 1 of <span class="citation">Ryan and Nielsen (2010)</span>.</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># order in Ryan2010 Figure 1</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>o <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">7</span>, <span class="dv">4</span>)</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="fu">barplot</span>(</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">setNames</span>(tbl2<span class="sc">$</span>cde20[o], tbl2<span class="sc">$</span>name[o]),</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">col =</span> ianes<span class="sc">$</span>Color[<span class="fu">match</span>(tbl2<span class="sc">$</span>name[o], ianes<span class="sc">$</span>Name)],</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">main =</span> <span class="fu">paste0</span>(</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>        <span class="st">&quot;Relative global warming impact of 1 MAC-hour of &quot;</span>,</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>        <span class="st">&quot;3 inhaled anesthetics at 2 L fresh gas flow&quot;</span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>    ),</span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>    <span class="at">ylab =</span> <span class="fu">expression</span>(CDE[<span class="dv">20</span>]),</span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>    <span class="at">sub =</span> <span class="st">&quot;CDE20 = 20-year carbon dioxide equivalent (in grams)&quot;</span></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div>
+<p><img src="data:image/png;base64,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" /><!-- --></p>
+<div id="refs" class="references csl-bib-body hanging-indent">
+<div id="ref-Ryan2010" class="csl-entry">
+Ryan, Susan M., and Claus J. Nielsen. 2010. <span>“Global Warming Potential of Inhaled Anesthetics.”</span> <em>Anesthesia &amp; Analgesia</em> 111 (1): 92–98. <a href="https://doi.org/10.1213/ane.0b013e3181e058d7">https://doi.org/10.1213/ane.0b013e3181e058d7</a>.
+</div>
+</div>
+</div>
+
+
+
+<!-- code folding -->
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
