@@ -12,6 +12,8 @@ A \code{data.frame} with 3 rows and 7 columns:
 \item{MW}{\code{double}, molecular weight.}
 \item{Density}{\code{double}, density.}
 \item{GWP20}{\code{double}, global warming potential for 20 years.}
+\item{GWP100}{\code{double}, global warming potential for 100 years.}
+\item{GWP500}{\code{double}, global warming potential for 500 years.}
 \item{Unit}{\code{numeric}, mili litre per unit/bottle.}
 \item{Color}{\code{character}, color code.}
 }

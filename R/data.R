@@ -9,6 +9,8 @@
 #' \item{MW}{`double`, molecular weight.}
 #' \item{Density}{`double`, density.}
 #' \item{GWP20}{`double`, global warming potential for 20 years.}
+#' \item{GWP100}{`double`, global warming potential for 100 years.}
+#' \item{GWP500}{`double`, global warming potential for 500 years.}
 #' \item{Unit}{`numeric`, mili litre per unit/bottle.}
 #' \item{Color}{`character`, color code.}
 #' }
