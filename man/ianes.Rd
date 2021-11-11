@@ -5,7 +5,7 @@
 \alias{ianes}
 \title{Inhalational Anesthetics}
 \format{
-A \code{data.frame} with 3 rows and 7 columns:
+A \code{data.frame} with 3 rows and 9 columns:
 \describe{
 \item{Name}{\code{character}, name.}
 \item{MAC}{\code{double}, minimum alveolar concentration.}

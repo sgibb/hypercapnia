@@ -2,7 +2,7 @@
 #'
 #' A dataset of physical properties of the some inhalational anesthetics.
 #'
-#' @format A `data.frame` with 3 rows and 7 columns:
+#' @format A `data.frame` with 3 rows and 9 columns:
 #' \describe{
 #' \item{Name}{`character`, name.}
 #' \item{MAC}{`double`, minimum alveolar concentration.}
