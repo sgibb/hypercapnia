@@ -1,3 +1,19 @@
+#' Fuels
+#'
+#' A dataset with carbon dioxid data of the some fuels.
+#'
+#' @format A `data.frame` with 2 rows and 2 columns:
+#' \describe{
+#' \item{Name}{`character`, name.}
+#' \item{CO2}{`double`, gram CO2 per litre fuel.}
+#' }
+#'
+#' @references
+#' Umweltbundesamt. "Ratgeber: Sprit sparen und mobil sein" (2009).
+#' \url{https://www.umweltbundesamt.de/sites/default/files/medien/publikation/long/3705.pdf}
+#' accessed 2021-11-11.
+"fuels"
+
 #' Inhalational Anesthetics
 #'
 #' A dataset of physical properties of the some inhalational anesthetics.
