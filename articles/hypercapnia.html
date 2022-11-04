@@ -19,6 +19,8 @@
 <![endif]-->
 </head>
 <body data-spy="scroll" data-target="#toc">
+    
+
     <div class="container template-article">
       <header><div class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
@@ -31,18 +33,12 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">hypercapnia</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.0.1</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">0.0.2</span>
       </span>
     </div>
 
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
-<li>
-  <a href="../index.html">
-    <span class="fas fa-home fa-lg"></span>
-     
-  </a>
-</li>
 <li>
   <a href="../articles/hypercapnia.html">Get started</a>
 </li>
@@ -55,7 +51,7 @@
       </ul>
 <ul class="nav navbar-nav navbar-right">
 <li>
-  <a href="https://github.com/sgibb/hypercapnia/">
+  <a href="https://github.com/sgibb/hypercapnia/" class="external-link">
     <span class="fab fa-github fa-lg"></span>
      
   </a>
@@ -76,26 +72,26 @@
       <h1 data-toc-skip>Global Warming Potential of Volatile Anaesthetics</h1>
             
       
-      <small class="dont-index">Source: <a href="https://github.com/sgibb/hypercapnia/blob/master/vignettes/hypercapnia.Rmd"><code>vignettes/hypercapnia.Rmd</code></a></small>
+      <small class="dont-index">Source: <a href="https://github.com/sgibb/hypercapnia/blob/HEAD/vignettes/hypercapnia.Rmd" class="external-link"><code>vignettes/hypercapnia.Rmd</code></a></small>
       <div class="hidden name"><code>hypercapnia.Rmd</code></div>
 
     </div>
 
     
     
-<div id="introduction" class="section level1">
-<h1 class="hasAnchor">
-<a href="#introduction" class="anchor"></a>Introduction</h1>
+<div class="section level2">
+<h2 id="introduction">Introduction<a class="anchor" aria-label="anchor" href="#introduction"></a>
+</h2>
 <p>The <code>hypercapnia</code> package offers functions to estimate the global warming potential of volatile anaesthetics based on values described in <span class="citation">Ryan and Nielsen (2010)</span>.</p>
 </div>
-<div id="data" class="section level1">
-<h1 class="hasAnchor">
-<a href="#data" class="anchor"></a>Data</h1>
+<div class="section level2">
+<h2 id="data">Data<a class="anchor" aria-label="anchor" href="#data"></a>
+</h2>
 <p><code>hypercapnia</code> includes the <code>ianes</code> data with important key facts about frequently used anaesthetics.</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="st"><a href="https://github.com/sgibb/hypercapnia/">"hypercapnia"</a></span><span class="op">)</span>
-
-<span class="fu">knitr</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/knitr/man/kable.html">kable</a></span><span class="op">(</span><span class="va">ianes</span><span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="st"><a href="https://github.com/sgibb/hypercapnia/" class="external-link">"hypercapnia"</a></span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu">knitr</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/knitr/man/kable.html" class="external-link">kable</a></span><span class="op">(</span><span class="va">ianes</span><span class="op">)</span></span></code></pre></div>
 <table class="table">
 <thead><tr class="header">
 <th align="left">Name</th>
@@ -114,9 +110,9 @@
 <td align="right">0.060</td>
 <td align="right">168.0</td>
 <td align="right">1.45</td>
-<td align="right">3714</td>
-<td align="right">1314</td>
-<td align="right">398</td>
+<td align="right">6810</td>
+<td align="right">2540</td>
+<td align="right">130</td>
 <td align="right">240</td>
 <td align="left">#3c4f8b</td>
 </tr>
@@ -125,9 +121,9 @@
 <td align="right">0.012</td>
 <td align="right">184.5</td>
 <td align="right">1.49</td>
-<td align="right">1401</td>
-<td align="right">429</td>
-<td align="right">130</td>
+<td align="right">1800</td>
+<td align="right">510</td>
+<td align="right">160</td>
 <td align="right">250</td>
 <td align="left">#9a2d80</td>
 </tr>
@@ -136,51 +132,51 @@
 <td align="right">0.020</td>
 <td align="right">200.0</td>
 <td align="right">1.52</td>
-<td align="right">349</td>
-<td align="right">106</td>
-<td align="right">32</td>
+<td align="right">508</td>
+<td align="right">144</td>
+<td align="right">43</td>
 <td align="right">250</td>
 <td align="left">#f8e620</td>
 </tr>
 </tbody>
 </table>
 </div>
-<div id="reproducing-table-2" class="section level1">
-<h1 class="hasAnchor">
-<a href="#reproducing-table-2" class="anchor"></a>Reproducing Table 2</h1>
+<div class="section level2">
+<h2 id="reproducing-table-2">Reproducing Table 2<a class="anchor" aria-label="anchor" href="#reproducing-table-2"></a>
+</h2>
 <p>In the next code snippet we reproduce the Table 2 of <span class="citation">Ryan and Nielsen (2010)</span>. (The values slightly differ because of different precision and ounding errors).</p>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="va">i</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/match.html">match</a></span><span class="op">(</span>
-    <span class="fu"><a href="https://rdrr.io/r/base/rep.html">rep</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"Sevoflurane"</span>, <span class="st">"Isoflurane"</span>, <span class="st">"Desflurane"</span><span class="op">)</span>, <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">3</span>, <span class="fl">3</span><span class="op">)</span><span class="op">)</span>,
-    <span class="va">ianes</span><span class="op">$</span><span class="va">Name</span>
-<span class="op">)</span>
-<span class="va">fgf</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">2</span>, <span class="fu"><a href="https://rdrr.io/r/base/rep.html">rep</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">0.5</span>, <span class="fl">1</span>, <span class="fl">2</span><span class="op">)</span>, <span class="fl">2</span><span class="op">)</span><span class="op">)</span>
-<span class="va">gph</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/gram_per_hour.html">gram_per_hour</a></span><span class="op">(</span>mass <span class="op">=</span> <span class="va">ianes</span><span class="op">$</span><span class="va">MW</span><span class="op">[</span><span class="va">i</span><span class="op">]</span>, mac <span class="op">=</span> <span class="va">ianes</span><span class="op">$</span><span class="va">MAC</span><span class="op">[</span><span class="va">i</span><span class="op">]</span>, fgf <span class="op">=</span> <span class="va">fgf</span><span class="op">)</span>
-<span class="va">cde20</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/cde.html">cde_gram_per_hour</a></span><span class="op">(</span>
-    mass <span class="op">=</span> <span class="va">ianes</span><span class="op">$</span><span class="va">MW</span><span class="op">[</span><span class="va">i</span><span class="op">]</span>, mac <span class="op">=</span> <span class="va">ianes</span><span class="op">$</span><span class="va">MAC</span><span class="op">[</span><span class="va">i</span><span class="op">]</span>, gwp <span class="op">=</span> <span class="va">ianes</span><span class="op">$</span><span class="va">GWP20</span><span class="op">[</span><span class="va">i</span><span class="op">]</span>, fgf <span class="op">=</span> <span class="va">fgf</span>
-<span class="op">)</span>
-<span class="va">tbl2</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html">data.frame</a></span><span class="op">(</span>
-    name <span class="op">=</span> <span class="va">ianes</span><span class="op">$</span><span class="va">Name</span><span class="op">[</span><span class="va">i</span><span class="op">]</span>, mac <span class="op">=</span> <span class="va">ianes</span><span class="op">$</span><span class="va">MAC</span><span class="op">[</span><span class="va">i</span><span class="op">]</span> <span class="op">*</span> <span class="fl">100</span>, fgf <span class="op">=</span> <span class="va">fgf</span>,
-    gph <span class="op">=</span> <span class="va">gph</span>, gwp20 <span class="op">=</span> <span class="va">ianes</span><span class="op">$</span><span class="va">GWP20</span><span class="op">[</span><span class="va">i</span><span class="op">]</span>, cde20 <span class="op">=</span> <span class="va">cde20</span>,
-    r <span class="op">=</span> <span class="va">cde20</span> <span class="op">/</span> <span class="va">cde20</span><span class="op">[</span><span class="fl">1</span><span class="op">]</span>
-<span class="op">)</span>
-<span class="fu">knitr</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/knitr/man/kable.html">kable</a></span><span class="op">(</span>
-    <span class="va">tbl2</span>,
-    col.names <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span>
-        <span class="st">"Name"</span>, <span class="st">"et %"</span>, <span class="st">"FGF (L/min)"</span>, <span class="st">"Grams/hour"</span>, <span class="st">"GWP20"</span>, <span class="st">"CDE20 (g/h)"</span>,
-        <span class="st">"Ratio CDE20"</span>
-    <span class="op">)</span>,
-    caption <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/paste.html">paste0</a></span><span class="op">(</span>
-        <span class="st">"Comparison of Global Warming Impact of "</span>,
-        <span class="st">"Frequently Used Inhaled Anesthetics per MAC-Hour of Use at "</span>,
-        <span class="st">"Various Fresh Gas Flows; "</span>,
-        <span class="st">"MAC = minimal alveolar concentration; "</span>,
-        <span class="st">"et = endtidal;"</span>,
-        <span class="st">"GWP20 = 20-year global warming potential; "</span>,
-        <span class="st">"CDE20 = 20-year carbon dioxide equivalent."</span>
-    <span class="op">)</span>,
-    digits <span class="op">=</span> <span class="fl">1</span>
-<span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span><span class="va">i</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/match.html" class="external-link">match</a></span><span class="op">(</span></span>
+<span>    <span class="fu"><a href="https://rdrr.io/r/base/rep.html" class="external-link">rep</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"Sevoflurane"</span>, <span class="st">"Isoflurane"</span>, <span class="st">"Desflurane"</span><span class="op">)</span>, <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">3</span>, <span class="fl">3</span><span class="op">)</span><span class="op">)</span>,</span>
+<span>    <span class="va">ianes</span><span class="op">$</span><span class="va">Name</span></span>
+<span><span class="op">)</span></span>
+<span><span class="va">fgf</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">2</span>, <span class="fu"><a href="https://rdrr.io/r/base/rep.html" class="external-link">rep</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">0.5</span>, <span class="fl">1</span>, <span class="fl">2</span><span class="op">)</span>, <span class="fl">2</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="va">gph</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/gram_per_hour.html">gram_per_hour</a></span><span class="op">(</span>mass <span class="op">=</span> <span class="va">ianes</span><span class="op">$</span><span class="va">MW</span><span class="op">[</span><span class="va">i</span><span class="op">]</span>, mac <span class="op">=</span> <span class="va">ianes</span><span class="op">$</span><span class="va">MAC</span><span class="op">[</span><span class="va">i</span><span class="op">]</span>, fgf <span class="op">=</span> <span class="va">fgf</span><span class="op">)</span></span>
+<span><span class="va">cde20</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/cde.html">cde_gram_per_hour</a></span><span class="op">(</span></span>
+<span>    mass <span class="op">=</span> <span class="va">ianes</span><span class="op">$</span><span class="va">MW</span><span class="op">[</span><span class="va">i</span><span class="op">]</span>, mac <span class="op">=</span> <span class="va">ianes</span><span class="op">$</span><span class="va">MAC</span><span class="op">[</span><span class="va">i</span><span class="op">]</span>, gwp <span class="op">=</span> <span class="va">ianes</span><span class="op">$</span><span class="va">GWP20</span><span class="op">[</span><span class="va">i</span><span class="op">]</span>, fgf <span class="op">=</span> <span class="va">fgf</span></span>
+<span><span class="op">)</span></span>
+<span><span class="va">tbl2</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html" class="external-link">data.frame</a></span><span class="op">(</span></span>
+<span>    name <span class="op">=</span> <span class="va">ianes</span><span class="op">$</span><span class="va">Name</span><span class="op">[</span><span class="va">i</span><span class="op">]</span>, mac <span class="op">=</span> <span class="va">ianes</span><span class="op">$</span><span class="va">MAC</span><span class="op">[</span><span class="va">i</span><span class="op">]</span> <span class="op">*</span> <span class="fl">100</span>, fgf <span class="op">=</span> <span class="va">fgf</span>,</span>
+<span>    gph <span class="op">=</span> <span class="va">gph</span>, gwp20 <span class="op">=</span> <span class="va">ianes</span><span class="op">$</span><span class="va">GWP20</span><span class="op">[</span><span class="va">i</span><span class="op">]</span>, cde20 <span class="op">=</span> <span class="va">cde20</span>,</span>
+<span>    r <span class="op">=</span> <span class="va">cde20</span> <span class="op">/</span> <span class="va">cde20</span><span class="op">[</span><span class="fl">1</span><span class="op">]</span></span>
+<span><span class="op">)</span></span>
+<span><span class="fu">knitr</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/knitr/man/kable.html" class="external-link">kable</a></span><span class="op">(</span></span>
+<span>    <span class="va">tbl2</span>,</span>
+<span>    col.names <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span></span>
+<span>        <span class="st">"Name"</span>, <span class="st">"et %"</span>, <span class="st">"FGF (L/min)"</span>, <span class="st">"Grams/hour"</span>, <span class="st">"GWP20"</span>, <span class="st">"CDE20 (g/h)"</span>,</span>
+<span>        <span class="st">"Ratio CDE20"</span></span>
+<span>    <span class="op">)</span>,</span>
+<span>    caption <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/paste.html" class="external-link">paste0</a></span><span class="op">(</span></span>
+<span>        <span class="st">"Comparison of Global Warming Impact of "</span>,</span>
+<span>        <span class="st">"Frequently Used Inhaled Anesthetics per MAC-Hour of Use at "</span>,</span>
+<span>        <span class="st">"Various Fresh Gas Flows; "</span>,</span>
+<span>        <span class="st">"MAC = minimal alveolar concentration; "</span>,</span>
+<span>        <span class="st">"et = endtidal;"</span>,</span>
+<span>        <span class="st">"GWP20 = 20-year global warming potential; "</span>,</span>
+<span>        <span class="st">"CDE20 = 20-year carbon dioxide equivalent."</span></span>
+<span>    <span class="op">)</span>,</span>
+<span>    digits <span class="op">=</span> <span class="fl">1</span></span>
+<span><span class="op">)</span></span></code></pre></div>
 <table class="table">
 <caption>Comparison of Global Warming Impact of Frequently Used Inhaled Anesthetics per MAC-Hour of Use at Various Fresh Gas Flows; MAC = minimal alveolar concentration; et = endtidal;GWP20 = 20-year global warming potential; CDE20 = 20-year carbon dioxide equivalent.</caption>
 <thead><tr class="header">
@@ -198,8 +194,8 @@
 <td align="right">2.0</td>
 <td align="right">2.0</td>
 <td align="right">20.0</td>
-<td align="right">349</td>
-<td align="right">6964.0</td>
+<td align="right">508</td>
+<td align="right">10136.7</td>
 <td align="right">1.0</td>
 </tr>
 <tr class="even">
@@ -207,83 +203,83 @@
 <td align="right">1.2</td>
 <td align="right">0.5</td>
 <td align="right">2.8</td>
-<td align="right">1401</td>
-<td align="right">3868.4</td>
-<td align="right">0.6</td>
+<td align="right">1800</td>
+<td align="right">4970.1</td>
+<td align="right">0.5</td>
 </tr>
 <tr class="odd">
 <td align="left">Isoflurane</td>
 <td align="right">1.2</td>
 <td align="right">1.0</td>
 <td align="right">5.5</td>
-<td align="right">1401</td>
-<td align="right">7736.8</td>
-<td align="right">1.1</td>
+<td align="right">1800</td>
+<td align="right">9940.2</td>
+<td align="right">1.0</td>
 </tr>
 <tr class="even">
 <td align="left">Isoflurane</td>
 <td align="right">1.2</td>
 <td align="right">2.0</td>
 <td align="right">11.0</td>
-<td align="right">1401</td>
-<td align="right">15473.5</td>
-<td align="right">2.2</td>
+<td align="right">1800</td>
+<td align="right">19880.3</td>
+<td align="right">2.0</td>
 </tr>
 <tr class="odd">
 <td align="left">Desflurane</td>
 <td align="right">6.0</td>
 <td align="right">0.5</td>
 <td align="right">12.6</td>
-<td align="right">3714</td>
-<td align="right">46689.2</td>
-<td align="right">6.7</td>
+<td align="right">6810</td>
+<td align="right">85609.4</td>
+<td align="right">8.4</td>
 </tr>
 <tr class="even">
 <td align="left">Desflurane</td>
 <td align="right">6.0</td>
 <td align="right">1.0</td>
 <td align="right">25.1</td>
-<td align="right">3714</td>
-<td align="right">93378.4</td>
-<td align="right">13.4</td>
+<td align="right">6810</td>
+<td align="right">171218.8</td>
+<td align="right">16.9</td>
 </tr>
 <tr class="odd">
 <td align="left">Desflurane</td>
 <td align="right">6.0</td>
 <td align="right">2.0</td>
 <td align="right">50.3</td>
-<td align="right">3714</td>
-<td align="right">186756.7</td>
-<td align="right">26.8</td>
+<td align="right">6810</td>
+<td align="right">342437.6</td>
+<td align="right">33.8</td>
 </tr>
 </tbody>
 </table>
 </div>
-<div id="reproducing-figure-1" class="section level1">
-<h1 class="hasAnchor">
-<a href="#reproducing-figure-1" class="anchor"></a>Reproducing Figure 1</h1>
+<div class="section level2">
+<h2 id="reproducing-figure-1">Reproducing Figure 1<a class="anchor" aria-label="anchor" href="#reproducing-figure-1"></a>
+</h2>
 <p>In the next code snippet we reproduce the Figure 1 of <span class="citation">Ryan and Nielsen (2010)</span>.</p>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="co"># order in Ryan2010 Figure 1</span>
-<span class="va">o</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">7</span>, <span class="fl">4</span><span class="op">)</span>
-<span class="fu"><a href="https://rdrr.io/r/graphics/barplot.html">barplot</a></span><span class="op">(</span>
-    <span class="fu"><a href="https://rdrr.io/r/stats/setNames.html">setNames</a></span><span class="op">(</span><span class="va">tbl2</span><span class="op">$</span><span class="va">cde20</span><span class="op">[</span><span class="va">o</span><span class="op">]</span>, <span class="va">tbl2</span><span class="op">$</span><span class="va">name</span><span class="op">[</span><span class="va">o</span><span class="op">]</span><span class="op">)</span>,
-    col <span class="op">=</span> <span class="va">ianes</span><span class="op">$</span><span class="va">Color</span><span class="op">[</span><span class="fu"><a href="https://rdrr.io/r/base/match.html">match</a></span><span class="op">(</span><span class="va">tbl2</span><span class="op">$</span><span class="va">name</span><span class="op">[</span><span class="va">o</span><span class="op">]</span>, <span class="va">ianes</span><span class="op">$</span><span class="va">Name</span><span class="op">)</span><span class="op">]</span>,
-    main <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/paste.html">paste0</a></span><span class="op">(</span>
-        <span class="st">"Relative global warming impact of 1 MAC-hour of "</span>,
-        <span class="st">"3 inhaled anesthetics at 2 L fresh gas flow"</span>
-    <span class="op">)</span>,
-    ylab <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/expression.html">expression</a></span><span class="op">(</span><span class="va">CDE</span><span class="op">[</span><span class="fl">20</span><span class="op">]</span><span class="op">)</span>,
-    sub <span class="op">=</span> <span class="st">"CDE20 = 20-year carbon dioxide equivalent (in grams)"</span>
-<span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span><span class="co"># order in Ryan2010 Figure 1</span></span>
+<span><span class="va">o</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">7</span>, <span class="fl">4</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/graphics/barplot.html" class="external-link">barplot</a></span><span class="op">(</span></span>
+<span>    <span class="fu"><a href="https://rdrr.io/r/stats/setNames.html" class="external-link">setNames</a></span><span class="op">(</span><span class="va">tbl2</span><span class="op">$</span><span class="va">cde20</span><span class="op">[</span><span class="va">o</span><span class="op">]</span>, <span class="va">tbl2</span><span class="op">$</span><span class="va">name</span><span class="op">[</span><span class="va">o</span><span class="op">]</span><span class="op">)</span>,</span>
+<span>    col <span class="op">=</span> <span class="va">ianes</span><span class="op">$</span><span class="va">Color</span><span class="op">[</span><span class="fu"><a href="https://rdrr.io/r/base/match.html" class="external-link">match</a></span><span class="op">(</span><span class="va">tbl2</span><span class="op">$</span><span class="va">name</span><span class="op">[</span><span class="va">o</span><span class="op">]</span>, <span class="va">ianes</span><span class="op">$</span><span class="va">Name</span><span class="op">)</span><span class="op">]</span>,</span>
+<span>    main <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/paste.html" class="external-link">paste0</a></span><span class="op">(</span></span>
+<span>        <span class="st">"Relative global warming impact of 1 MAC-hour of "</span>,</span>
+<span>        <span class="st">"3 inhaled anesthetics at 2 L fresh gas flow"</span></span>
+<span>    <span class="op">)</span>,</span>
+<span>    ylab <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/expression.html" class="external-link">expression</a></span><span class="op">(</span><span class="va">CDE</span><span class="op">[</span><span class="fl">20</span><span class="op">]</span><span class="op">)</span>,</span>
+<span>    sub <span class="op">=</span> <span class="st">"CDE20 = 20-year carbon dioxide equivalent (in grams)"</span></span>
+<span><span class="op">)</span></span></code></pre></div>
 <p><img src="hypercapnia_files/figure-html/figure1-1.png" width="700"></p>
 </div>
-<div id="references" class="section level1 unnumbered">
-<h1 class="hasAnchor">
-<a href="#references" class="anchor"></a>References</h1>
+<div class="section level2">
+<h2 id="references">References<a class="anchor" aria-label="anchor" href="#references"></a>
+</h2>
 <div id="refs" class="references">
 <div id="ref-Ryan2010">
-<p>Ryan, Susan M., and Claus J. Nielsen. 2010. “Global Warming Potential of Inhaled Anesthetics.” <em>Anesthesia &amp; Analgesia</em> 111 (1): 92–98. <a href="https://doi.org/10.1213/ane.0b013e3181e058d7">https://doi.org/10.1213/ane.0b013e3181e058d7</a>.</p>
+<p>Ryan, Susan M., and Claus J. Nielsen. 2010. “Global Warming Potential of Inhaled Anesthetics.” <em>Anesthesia &amp; Analgesia</em> 111 (1): 92–98. <a href="https://doi.org/10.1213/ane.0b013e3181e058d7" class="external-link">https://doi.org/10.1213/ane.0b013e3181e058d7</a>.</p>
 </div>
 </div>
 </div>
@@ -300,11 +296,13 @@
 
 
       <footer><div class="copyright">
-  <p>Developed by Sebastian Gibb.</p>
+  <p></p>
+<p>Developed by Sebastian Gibb.</p>
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
+  <p></p>
+<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.6.</p>
 </div>
 
       </footer>
@@ -312,6 +310,8 @@
 
   
 
+
+  
 
   </body>
 </html>
