@@ -25,9 +25,15 @@ ianes
 A dataset of physical properties of the some inhalational anesthetics.
 }
 \references{
-Ryan, Susan M., and Claus J. Nielsen.
-"Global warming potential of inhaled anesthetics: application to clinical use."
-Anesthesia & Analgesia 111.1 (2010): 92-98.
-\doi{10.1213/ane.0b013e3181e058d7}
+Andersen, Nielsen, Wallington, Karpichev, and Sander
+"Assessing the Impact on Global Climate from General Anesthetic Gases"
+Anesthesia & Analgesia 114.5 (2012): 1081-1085
+\doi{10.1213/ANE.0b013e31824d6150}
+
+Andersen, Nielsen, and Sherman
+"The Global Warming Potentials for Anesthetic Gas Sevoflurane Need
+Significant Corrections"
+Environ. Sci. Technol. 2021, 55, 15, 10189–10191
+\doi{10.1021/acs.est.1c02573}
 }
 \keyword{datasets}
